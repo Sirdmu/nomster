@@ -10,4 +10,4 @@
   </div>
 <% end %>
 
-<%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+<%= will_paginate @collection, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
