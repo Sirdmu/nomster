@@ -73,6 +73,12 @@
 </button>
 </div>
 
+<div class="clear"></div>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
+
 <div class="row">
   <% @place.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
@@ -86,3 +92,8 @@
     </div>
   <% end %>
 </div>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+</div>
+<% end %>
